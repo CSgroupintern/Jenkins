@@ -22,4 +22,4 @@ sudo ./run-cis-benchmark.sh > ../centos-bench-results ; \
 cat ../centos-bench-results; \
 cat ../centos-bench-results | grep FAIL | wc -l >> /tmp/scans-jenkins-sec/sv ; \
                             cd /tmp/scans-jenkins-sec/; \
-                            ./launch_kube.sh | tail -3 | head -1 >> /tmp/scans-jenkins-sec/sv; cat  /tmp/scans-jenkins-sec/sv | sed ':a;N;$!ba;s/\n/ /g'
+                            ./launch_kube.sh | tail -3 | head -1 >> /tmp/scans-jenkins-sec/sv; cat  /tmp/scans-jenkins-sec/sv | sed ':a;N;$!ba;s/\n/ /g'; rm -rf /tmp/scans-jenkins-sec
